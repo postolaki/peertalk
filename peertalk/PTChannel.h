@@ -7,9 +7,24 @@
 #import <netinet/in.h>
 #import <sys/socket.h>
 
+#if __has_include(<peertalk/PTProtocol.h>)
 #import <peertalk/PTProtocol.h>
+#else
+#import "PTProtocol.h"
+#endif
+
+#if __has_include(<peertalk/PTUSBHub.h>)
 #import <peertalk/PTUSBHub.h>
+#else
+#import "PTUSBHub.h"
+#endif
+
+#if __has_include(<peertalk/PTUSBHub.h>)
 #import <peertalk/PTDefines.h>
+#else
+#import "PTDefines.h"
+#endif
+
 
 @class PTAddress;
 @protocol PTChannelDelegate;
